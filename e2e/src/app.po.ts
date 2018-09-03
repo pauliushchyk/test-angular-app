@@ -5,7 +5,30 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getTitleText() {
+    return element(by.css('app-root app-title')).getText();
+  }
+
+  getSearchInput() {
+    return element(by.css('search-form input'));
+  }
+
+  getMovieLink() {
+    return element
+      .all(by.css('.container li'))
+      .get(0)
+      .element(by.css('a'));
+  }
+
+  getMovieName() {
+    return element(by.css('.movie__name'));
+  }
+
+  getBackButton() {
+    return element(by.css('.back'));
+  }
+
+  getMovies() {
+    return element.all(by.css('.container li'));
   }
 }
