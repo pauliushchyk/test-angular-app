@@ -1,0 +1,32 @@
+:host {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  justify-items: center;
+
+  a {
+    display: block;
+
+    padding: 1.125em 3.75em;
+
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: #5d59f7;
+
+    transition: all 0.3s ease-in-out;
+
+    cursor: pointer;
+
+    border: {
+      width: 0;
+      color: transparent;
+      radius: 3.75em;
+    }
+
+    &:hover {
+      background-color: darken(#5d59f7, 2);
+    }
+  }
+}
