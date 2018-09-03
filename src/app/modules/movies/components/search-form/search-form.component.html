@@ -1,0 +1,4 @@
+<form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit($event)" (keydown.enter)="onSubmit($event)">
+  <input autofocus placeholder="Find your movie..." type="search" formControlName="query">
+  <button type="submit">Go</button>
+</form>

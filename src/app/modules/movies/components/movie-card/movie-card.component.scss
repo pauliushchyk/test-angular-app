@@ -1,0 +1,74 @@
+:host {
+  .movie {
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+    height: 25em;
+    min-height: 0;
+    min-width: 0;
+
+    border-radius: 1.5em;
+    box-shadow: 0 10px 40px 0px rgba(204, 204, 204, 0.3);
+    overflow: hidden;
+
+    background-color: #ffffff;
+
+    transition: all 0.3s ease-in-out;
+
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: 0 15px 60px 0px rgba(204, 204, 204, 0.7);
+
+      transform: translateY(-0.625em);
+    }
+
+    &__image {
+      min-height: 0;
+      min-width: 0;
+
+      overflow: hidden;
+
+      background: {
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+      }
+    }
+
+    &__info {
+      padding: 1.5em;
+
+      min-height: 0;
+      min-width: 0;
+    }
+
+    &__name {
+      margin: 0 0 0.5em 0;
+
+      width: 100%;
+
+      color: #424071;
+      font-weight: 100;
+      font-size: 1.125em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      overflow: hidden;
+    }
+
+    &__rate {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 0.4em;
+      align-items: center;
+      justify-content: start;
+
+      margin: 0;
+
+      color: #5c5cf7;
+      font-size: 0.75em;
+      line-height: 0.75em;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<app-title text="Movie library"></app-title>
+
+<search-form (search)="onSearch($event)"></search-form>
+
+<ng-container *ngIf="(movies$ | async) as movies; else loading">
+  <ul class="container" [@listAnimation]="movies.length">
+    <li *ngFor="let movie of movies">
+      <movie-card [movie]="movie"></movie-card>
+    </li>
+  </ul>
+</ng-container>
+
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

@@ -1,0 +1,29 @@
+<ng-container *ngIf="(movie$ | async) as movie; else loading">
+  <a class="back" routerLink="/movies"><i class="fa fa-arrow-left"></i> go to movies</a>
+
+  <div class="movie" @elementAnimation>
+    <div class="movie__banner block" [ngStyle]="{'background-image': 'url(assets/images/movie-covers/' + movie.img + ')'}"></div>
+
+    <div class="movie__info">
+      <h3 class="movie__name block">
+        {{movie.name}}
+        <span class="movie__rate">
+          <i class="fa fa-star"></i>
+          <span [innerHtml]="movie.rate"></span>
+        </span>
+      </h3>
+
+      <p class="movie__description block" [innerHtml]="movie.description"></p>
+
+      <p class="movie__duration block">Duration: <span class="movie__badge" [innerHtml]="movie.length"></span></p>
+
+      <ul class="movie__genres">
+        <li class="movie__genre block" *ngFor="let genre of movie.genres" [innerHtml]="genre"></li>
+      </ul>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

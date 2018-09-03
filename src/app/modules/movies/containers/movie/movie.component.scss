@@ -1,0 +1,123 @@
+:host {
+  .back {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1em;
+    justify-content: start;
+
+    margin: 2em 3em;
+
+    width: max-content;
+
+    color: #5c5cf7;
+    text-decoration: none;
+  }
+
+  .movie {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 3em;
+    justify-content: center;
+
+    margin: 5em 3em;
+
+    max-width: 1200px;
+
+    &__banner {
+      position: relative;
+
+      height: 25em;
+      width: 100%;
+      max-width: 17em;
+
+      border-radius: 1.5em;
+      box-shadow: 0 15px 60px 0px rgba(204, 204, 204, 0.7);
+
+      background: {
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+      }
+    }
+
+    &__info {
+      max-width: 30em;
+    }
+
+    &__name {
+      margin: 0 0 0.875em 0;
+
+      color: #424071;
+      font-size: 3em;
+      font-weight: 100;
+    }
+
+    &__description {
+      margin: 0 0 1em 0;
+
+      color: #727294;
+      font-size: 1.1em;
+      line-height: 2;
+    }
+
+    &__duration {
+      margin: 0 0 2em 0;
+
+      color: #727294;
+    }
+
+    &__badge {
+      padding: 0.2em 0.5em;
+
+      background-color: #5c5cf7;
+
+      border-radius: 1.5em;
+
+      color: #ffffff;
+      font-size: 0.875em;
+    }
+
+    &__rate {
+      margin-left: 0.7em;
+
+      color: #5c5cf7;
+      font-size: 0.4em;
+
+      .fa-star {
+        margin-right: 0.4em;
+      }
+    }
+
+    &__genres {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: min-content;
+      grid-column-gap: 0.875em;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    &__genre {
+      padding: 1em;
+
+      background-color: #ffffff;
+
+      border-radius: 1.5em;
+      box-shadow: 0 10px 40px 0px rgba(204, 204, 204, 0.7);
+
+      color: #424071;
+      font-size: 0.875em;
+      text-transform: uppercase;
+    }
+
+    @media screen and (min-width: 940px) {
+      grid-template-columns: 17em auto;
+      grid-gap: 5em;
+
+      margin: 5em auto;
+    }
+  }
+}
