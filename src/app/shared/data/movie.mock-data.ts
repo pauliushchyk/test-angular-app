@@ -1,5 +1,7 @@
 import { genreType } from '../../entities/genre-type';
 
+/* tslint:disable */
+
 export const movies: any[] = [
   {
     id: 1,
@@ -266,3 +268,5 @@ export const movies: any[] = [
     img: 'bad-boys.jpg',
   },
 ];
+
+/* tslint:enable */

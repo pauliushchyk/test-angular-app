@@ -10,7 +10,7 @@ export class AppPage {
   }
 
   getSearchInput() {
-    return element(by.css('search-form input'));
+    return element(by.css('app-search-form input'));
   }
 
   getMovieLink() {

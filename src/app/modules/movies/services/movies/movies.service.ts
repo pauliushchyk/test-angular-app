@@ -27,8 +27,8 @@ export class MoviesService {
 
   getMovies(query?: string) {
     return of(this._movies).pipe(
-      map((movies: Map<number, Movie>) =>
-        Array.from(movies.values()).filter(
+      map((list: Map<number, Movie>) =>
+        Array.from(list.values()).filter(
           (movie: Movie) =>
             !query ||
             (query && movie.name.toLowerCase().includes(query.toLowerCase())),

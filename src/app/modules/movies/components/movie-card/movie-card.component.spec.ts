@@ -22,8 +22,7 @@ describe('MovieCardComponent', () => {
       id: 1,
       key: 'deadpool',
       name: 'Deadpool',
-      description:
-        'A former Special Forces operative turned mercenary is subjected to a rogue experiment that leaves him with accelerated healing powers, adopting the alter ego Deadpool.',
+      description: 'Deadpool.',
       genres: [genreType.action, genreType.adventure, genreType.comedy],
       rate: 8.6,
       length: '1hr 48mins',

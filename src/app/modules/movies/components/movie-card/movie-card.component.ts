@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import { Movie } from './../../../../entities/movie';
 
 @Component({
-  selector: 'movie-card',
+  selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss'],
 })
