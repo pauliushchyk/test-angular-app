@@ -1,0 +1,12 @@
+image: node:6.9.4
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script:
+          - npm install
+          - npm lint
+          - npm test
+          - npm e2e
