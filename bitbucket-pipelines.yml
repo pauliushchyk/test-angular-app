@@ -7,6 +7,6 @@ pipelines:
           - node
         script:
           - npm install
-          - npm lint
-          - npm test
-          - npm e2e
+          - npm run lint
+          - npm run test
+          - npm run e2e
